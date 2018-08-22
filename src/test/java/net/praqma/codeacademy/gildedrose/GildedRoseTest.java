@@ -35,4 +35,12 @@ public class GildedRoseTest {
         assertEquals("Lars HoensIAsparges", app.items[0].name);
     }
 
+    @Test
+    public void agedBrie() {
+        Item[] items = new Item[] { new Item("aged brie", 5, 1) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals("aged brie", app.items[0].name);
+    }
+
 }
