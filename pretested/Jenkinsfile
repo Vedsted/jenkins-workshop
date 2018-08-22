@@ -25,15 +25,6 @@ node {
         // run maven tests here
         sh 'docker run -i -v $PWD:/usr/src/mymaven -w /usr/src/mymaven --rm maven:3-jdk-8 mvn test'
     }
-    stage('Javadoc') {
-        sh 'mvn site'
-        archiveArtifacts 'target/apidocs/*'
-        archiveArtifacts 'target/site/*'
-    }
-    stage('Results') {
-        junit '**/target/surefire-reports/TEST-*.xml'
-        archiveArtifacts 'target/*.jar'
-    }
     stage("Publish"){
         //This publishes the commit if the tests have run without errors
         pretestedIntegrationPublisher()
