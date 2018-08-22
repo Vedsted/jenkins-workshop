@@ -37,7 +37,7 @@ public class GildedRoseTest {
 
     @Test
     public void agedBrie() {
-        Item[] items = new Item[] { new Item("aged brie", 5, 8) };
+        Item[] items = new Item[] { new Item("aged brie", 5, 9) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals("aged brie", app.items[0].name);
