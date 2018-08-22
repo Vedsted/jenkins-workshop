@@ -20,10 +20,19 @@ public class GildedRoseTest {
 
     @test
     public void bar() {
-        Item[] items = new Item[] { new Item("bar", 8, 19) };
+        Item[] items = new Item[] { new Item("bar", 8, 10) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals("lars", app.items[0].name);
+        assertEquals("bar", app.items[0].name);
+    }
+
+
+    @test
+    public void lars() {
+        Item[] items = new Item[] { new Item("Lars HoensIAsparges", 5, 1) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals("Lars HoensIAsparges", app.items[0].name);
     }
 
 }
