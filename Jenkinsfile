@@ -1,6 +1,6 @@
 node {
     stage('Preparation') { 
-        git branch: 'master', credentialsId: 'vedsted', url: 'git@github.com:Vedsted/jenkins-workshop.git'
+        checkout scm
     }
     stage('Build') {
         sh 'mvn clean package'
