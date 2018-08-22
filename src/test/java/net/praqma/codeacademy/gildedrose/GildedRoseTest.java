@@ -18,7 +18,7 @@ public class GildedRoseTest {
     }
 
 
-    @test
+    @Test
     public void bar() {
         Item[] items = new Item[] { new Item("bar", 8, 10) };
         GildedRose app = new GildedRose(items);
@@ -27,7 +27,7 @@ public class GildedRoseTest {
     }
 
 
-    @test
+    @Test
     public void lars() {
         Item[] items = new Item[] { new Item("Lars HoensIAsparges", 5, 1) };
         GildedRose app = new GildedRose(items);
