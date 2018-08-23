@@ -51,4 +51,5 @@ public class GildedRoseTest {
         app.updateQuality();
         assertEquals("unaged brie", app.items[0].name);
     }
+
 }
